@@ -1,0 +1,31 @@
+:root{
+    --theme-color: #09C5AB;
+    --text-color: #333;
+    --text-color-sec: rgba(209, 208, 208, 0.918);
+    --text-color-th: rgb(85, 85, 85);
+}
+*{
+    box-sizing: inherit;
+}
+html {
+    font-family: 'Roboto', 'sans-serif';
+    box-sizing: border-box;
+}
+.grid{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.logo{
+    font-weight: 800;
+    font-size: 3rem;
+    color: rgb(255, 255, 255) !important;
+}
+.btn{
+    border-radius: 5px;
+    width: 190px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    color: white;
+}
