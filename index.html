@@ -69,10 +69,10 @@
                     <a href="" class="header__navbar-item-link">Liên Hệ</a>
                 </li>
                 <li class="header__navbar-item">
-                    <a href="#0" class="header__navbar-item-link btn-modal" id="login">Đăng Nhập</a>
+                    <a href="#0" class="header__navbar-item-link btn-modal" id="login" onclick="checkFormLogin()">Đăng Nhập</a>
                 </li>
                 <li class="header__navbar-item">
-                    <a href="#0" class="header__navbar-item-link btn-modal" id="signup">Đăng Kí</a>
+                    <a href="#0" class="header__navbar-item-link btn-modal" id="signup" onclick="checkFormSignup()">Đăng Kí</a>
                 </li>
                 <!-- <li class="header__navbar-item">
                     <a href="#0" class="header__navbar-item-link btn-modal" id="logout">Đăng Xuất</a>
@@ -229,16 +229,23 @@
         var pwd = document.getElementById('password-signup');
         var repwd = document.getElementById('repassword');
         var erroRepwd = document.getElementById('repassword-validate');
+        var loginModal = document.getElementById('login-modal');
+        var signupModal = document.getElementById('signup-modal');
         function rePwdValidate(){
         
             if (pwd.value.localeCompare(repwd.value)!=0) {erroRepwd.style.display="block";}
             else {erroRepwd.style.display="none";}
         }
-        var loginModal = document.getElementById('login-modal');
+        function  checkFormLogin(){
+                document.getElementById('signup-modal').style.display="none";
+        }
+        function  checkFormSignup(){
+                document.getElementById('login-modal').style.display="none";
+        }
         $("#login").on('click', function () {
             loginModal.style.display = "flex";
         });
-        var signupModal = document.getElementById('signup-modal');
+        
         $("#signup").on('click', function () {
             signupModal.style.display = "flex";
         });
