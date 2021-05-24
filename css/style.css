@@ -25,6 +25,7 @@
 }
 .header__navbar-item-link:hover{
     color: white;
+    text-decoration: none;
 }
 .header__navbar-item-link em{
     color:#09C5AB;
@@ -77,9 +78,9 @@
 }
 .booking__app{
     position: relative;
-    top: 100px;
+    top: 50px;
     width: 360px;
-    height: 450px;
+    height: 500px;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -148,7 +149,7 @@
 .container__item{
     display: flex;
     flex-direction: column;
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 .container__item-title{
     color: var(--theme-color);
@@ -299,3 +300,100 @@
     margin-top:60px;
     color: white;
 }
+/* modal */  
+.login__app{
+    z-index: 2;
+    position: fixed;
+    top: 80px;
+    left: 61%;
+    width: 360px;
+    height: 350px;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    box-shadow: 0px 10px 20px -7px #000000, 10px 12px 17px -7px rgba(0,0,0,0);
+}
+.signup__app{
+    z-index: 2;
+    position: fixed;
+    top: 80px;
+    left: 61%;
+    width: 360px;
+    height: 600px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 10px 20px -7px #000000, 10px 12px 17px -7px rgba(0,0,0,0);
+}
+.signup__app::after{
+    position: absolute;
+    content: "";
+    height:10px;
+    width: 100%;
+    background-color: var(--theme-color);
+}
+.signup__form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+#repassword-validate{
+    color: rgba(255, 0, 98, 0.658);
+    display: none;   
+}
+.login__app::after{
+    position: absolute;
+    content: "";
+    height:10px;
+    width: 100%;
+    background-color: var(--theme-color);
+}
+.login__app-header{
+    display: flex;
+    justify-content: space-between;
+}
+  .login__form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+.login__button{
+    margin: 20px auto 0 40px;
+    background-color: var(--theme-color);
+    color: white;
+}
+  .cancelbtn {
+
+    width: auto;
+    padding: 10px 18px;
+    background-color: #609da1;
+  }
+  .close {
+    color: rgb(0, 0, 0);
+    font-size: 35px;
+    font-weight: bold;
+    margin: 20px 20px 0 0;
+    text-align: center;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
