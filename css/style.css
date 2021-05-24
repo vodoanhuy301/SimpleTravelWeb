@@ -72,7 +72,7 @@
     font-weight: 100;
 }
 .booking__app-title{
-    margin: 40px 0 20px 40px;
+    margin: 40px auto 20px auto;
     font-weight: 400;
     font-size: 1.5rem;
 }
@@ -321,7 +321,7 @@
     width: 360px;
     height: 600px;
     background-color: white;
-    display: flex;
+    display: none;
     flex-direction: column;
     box-shadow: 0px 10px 20px -7px #000000, 10px 12px 17px -7px rgba(0,0,0,0);
 }
