@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Ty Du Lịch 2H</title>
+    <link rel="stylesheet" href="/new/css/normalizeCSS.css">
+    <link rel="stylesheet" href="/new/css/base.css">
+    <link rel="stylesheet" href="/new/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="grid">
+    <div class="header header-sec">
+        <nav class="header__navbar">
+            <div class="header__navbar-logo">
+                <a href="./index.html" class="header__navbar-item-link logo">2H<em>.</em></a>
+            </div>
+            <ul class="header__navbar-list">
+                <li class="header__navbar-item">
+                    <a href="./index.html" class="header__navbar-item-link">Trang Chủ</a>
+                </li>
+                <li class="header__navbar-item">
+                    <a href="./dichvudulich.html" class="header__navbar-item-link">Dịch vụ Du Lịch</a>
+                </li>
+                <li class="header__navbar-item">
+                    <a href="" class="header__navbar-item-link">Liên Hệ</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="title-zone">
+            <h1 class="title-sec">Liên hệ với chúng tôi</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container-slogan-sec">
+            <span class="container__description-four"><b>Số điện thoại hotline: </b>0123456789</span>
+            <span class="container__description-four"><b>Email: </b>contact@2h.com</span>
+            <span class="container__description-four"><b>Facebook: </b>2h.com</span>
+            <span class="container__description-four"><b>Địa chỉ: </b>123 Đường ABC, Phường 1, Quận 1, Thành Phố XYZ</span>
+        </div>
+        <div class="container-slogan">
+            <div class="container__title container__title-sec">
+                <h1 class="header-title">Chất lượng, uy tín, năng động!</h1>
+                <span class="container__description-th">Với nguồn nhân lực trẻ, chúng tôi hy vọng sẽ đem tới sự
+                    năng động, hiệu quả trong công việc. Giúp bạn tận hưởng kỳ nghỉ một cách vui vẻ và thoải
+                    mái! </span>
+            </div>
+        </div>
+        <div class="container-statistics">
+            <div class="container__title container__title-sec">
+                <h1 class="header-title">Những con số biết nói</h1>
+                <span class="container__description">Công ty chúng tôi chân thành cảm ơn các quý công ty liên
+                    kết, các quý khách hàng</span>
+            </div>
+            <div class="container__list-sec">
+                <div class="container__item">
+                    <span id="destination-number" class="number-increase"></span>
+                    <h3 class="container__item-title-th">Điểm đến</h3>
+                </div>
+                <div class="container__item">
+                    <span id="hotel-number" class="number-increase"></span>
+                    <h3 class="container__item-title-th">Khách sạn</h3>
+                </div>
+                <div class="container__item">
+                    <span id="customer-number" class="number-increase"></span>
+                    <h3 class="container__item-title-th">Khách hàng</h3>
+                </div>
+                <div class="container__item">
+                    <span id="happy-customer-number" class="number-increase"></span>
+                    <h3 class="container__item-title-th">Số khách hàng hài lòng</h3>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer__list">
+                <div class="footer__item">
+                    <h2 class="footer__title">Về chúng tôi</h2>
+                    <p class="footer__description">
+                        Công ty du lịch 2H - Cung cấp các dịch vụ du lịch như du lịch tham quan, du lịch nghỉ
+                        dưỡng
+                    </p>
+                </div>
+                <div class="footer__item">
+                    <h2 class="footer__title">Dịch vụ của chúng tôi</h2>
+                    <ul class="footer__item-list">
+                        <li class="footer__list-item">Du lịch tham quan</li>
+                        <li class="footer__list-item">Du lịch nghỉ dưỡng</li>
+                        <li class="footer__list-item">Dã ngoại gia đình</li>
+                        <li class="footer__list-item">Tổ chức ngoại khóa, teambuilding</li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <h2 class="footer__title">Liên lạc</h2>
+                    <ul class="footer__item-list">
+                        <li class="footer__list-item">Địa chỉ: 123 Đường ABC, Phường 1, Quận 1, Thành Phố XYZ
+                        </li>
+                        <li class="footer__list-item">Số điện thoại: 0123456789</li>
+                        <li class="footer__list-item">Email: contact@2h.com</li>
+                    </ul>
+                </div>
+            </div>
+            <span class="footer-copyright">&copy;Công Ty Du lịch 2H - 2021</span>
+        </div>
+    </div>
+
+    </div> 
+    <script>
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const obj1 = document.getElementById("destination-number");
+        const obj2 = document.getElementById("hotel-number");
+        const obj3 = document.getElementById("customer-number");
+        const obj4 = document.getElementById("happy-customer-number");
+        animateValue(obj1, 0, 120, 8000);
+        animateValue(obj2, 0, 50, 8000);
+        animateValue(obj3, 0, 20000, 8000);
+        animateValue(obj4, 0, 19923, 8000);
+    </script>      
+</body>
+
+</html>

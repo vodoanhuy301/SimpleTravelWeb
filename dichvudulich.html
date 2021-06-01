@@ -13,90 +13,31 @@
 </head>
 
 <body>
-    <div class="grid">
-            <div class="login__app" id="login-modal">
-                <div class="login__app-header">
-                    <h3 class="booking__app-title">Đăng nhập</h3>
-                    <span onclick="document.getElementById('login-modal').style.display='none'" class="close" title="Close Modal">&times;</span>
-                </div>
-               
-                <form action="" class="login__form" method="POST">
-                    <label for="name" class="booking__label">Tài Khoản</label>
-                    <input type="text" class="booking__input" name="username" placeholder="Email của bạn" id="username" required>
-                    <label for="tel" class="booking__label">Mật Khẩu</label>
-                    <input type="password" class="booking__input" name="password" id="password" required>
-                    <button type="submit" class="btn login__button">Login</button>
-                </form>
-            </div>
-            <div class="signup__app" id="signup-modal">
-                <div class="login__app-header">
-                    <h3 class="booking__app-title">Đăng Kí</h3>
-                    <span onclick="document.getElementById('signup-modal').style.display='none'" class="close" title="Close Modal">&times;</span>
-                </div>
-               
-                <form action="" class="signup__form" method="POST">
-                    <label for="name" class="booking__label">Họ và tên</label>
-                    <input type="text" class="booking__input" name="name" id="name">
-                    <label for="tel" class="booking__label">Số điện thoại</label>
-                    <input type="text" class="booking__input" name="tel" id="tel">
-                    <label for="email" class="booking__label">Email</label>
-                    <input type="text" class="booking__input" name="email" id="email">
-                    <label for="password" class="booking__label">Mật Khẩu</label>
-                    <input type="password" class="booking__input" name="password" id="password-signup" required>
-                    <label for="repassword" class="booking__label"> Nhập Lại Mật Khẩu</label>
-                    <label  for="repassword" class="booking__label" id="repassword-validate">Vui lòng nhập đúng với mật khẩu ở trên!</label>
-                    <input type="password" class="booking__input" name="repassword" id="repassword" onkeyup="rePwdValidate()"  required>
-                    <button type="submit" class="btn login__button">Đăng Kí</button>
-                </form>
-            </div>
-
-    <div class="header">
+<div class="grid">
+    <div class="header header-sec">
         <nav class="header__navbar">
             <div class="header__navbar-logo">
                 <a href="./index.html" class="header__navbar-item-link logo">2H<em>.</em></a>
             </div>
             <ul class="header__navbar-list">
                 <li class="header__navbar-item">
+                    <a href="./index.html" class="header__navbar-item-link">Trang Chủ</a>
+                </li>
+                <li class="header__navbar-item">
                     <a href="./dichvudulich.html" class="header__navbar-item-link">Dịch vụ Du Lịch</a>
                 </li>
                 <li class="header__navbar-item">
                     <a href="./lienhe.html" class="header__navbar-item-link">Liên Hệ</a>
                 </li>
-                <li class="header__navbar-item">
-                    <a href="#0" class="header__navbar-item-link btn-modal" id="login" onclick="checkFormLogin()">Đăng Nhập</a>
-                </li>
-                <li class="header__navbar-item">
-                    <a href="#0" class="header__navbar-item-link btn-modal" id="signup" onclick="checkFormSignup()">Đăng Kí</a>
-                </li>
-                <!-- <li class="header__navbar-item">
-                    <a href="#0" class="header__navbar-item-link btn-modal" id="logout">Đăng Xuất</a>
-                </li> -->
             </ul>
         </nav>
-        <div class="booking">
-            <h1 class="title">Bạn đang dự định <br> đi du lịch <small>?</small></h1>
-            <div class="booking__app">
-                <h3 class="booking__app-title">Đăng kí nhận thông tin tư vấn</h3>
-                <form action="" class="booking__form" method="POST">
-                    <label for="name" class="booking__label">Họ và tên</label>
-                    <input type="text" class="booking__input" name="name" id="name">
-                    <label for="tel" class="booking__label">Số điện thoại</label>
-                    <input type="text" class="booking__input" name="tel" id="tel">
-                    <label for="email" class="booking__label">Email</label>
-                    <input type="text" class="booking__input" name="email" id="email">
-                    <label for="content" class="booking__label">Nội dung tư vấn</label>
-                    <input type="text" class="booking__input" name="content" id="content">
-                    <button class="btn btn-booking">Đăng kí</button>
-                </form>
-            </div>
+        <div class="title-zone">
+            <h1 class="title-sec">Các điểm đến du lịch tham quan</h1>
         </div>
     </div>
     <div class="container">
         <div class="container-bestchoice">
-            <div class="container__title">
-                <h1 class="header-title">Những điểm đến được yêu thích nhều nhất</h1>
-            </div>
-            <div class="container__list">
+            <div class="container__list-sec">
                 <div class="container__item">
                     <img src="/new/image/1_Top_5_Beaches_in_Nha_Trang_-_By_Simon_Dannhauer.jpg" alt=""
                         class="container__img">
@@ -130,26 +71,6 @@
                         <p class="container__item-price">3.990.000đ</p>
                         <button class="btn btn-seemore">Xem thêm</button>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-guide">
-            <div class="container__title">
-                <h1 class="header-title">Hướng dẫn đặt dịch vụ du lịch</h1>
-                <span class="container__description-sec">Có 2 cách đơn giản để đặt dịch vụ du lịch</span>
-            </div>
-            <div class="container__list-sec">
-                <div class="container__item container__guide-step">
-                    <span class="container__icon">1</span>
-                    <h3 class="container__item-title-sec">Đặt qua điện thoại</h3>
-                    <p class="container__item-description">Chỉ cần nhập thông tin vào mục <br>"Đăng kí nhận
-                        thông tin", chúng tôi sẽ liên lạc và tư vấn cho bạn!</p>
-                </div>
-                <div class="container__item container__guide-step">
-                    <span class="container__icon">2</span>
-                    <h3 class="container__item-title-sec">Đặt online qua website</h3>
-                    <p class="container__item-description">Chỉ cần "Đăng nhập" và chọn gói du lịch mà bạn cần,
-                        chúng tôi sẽ xác nhận đơn, thanh toán qua hình thức Mobile Banking</p>
                 </div>
             </div>
         </div>
@@ -218,31 +139,8 @@
         </div>
     </div>
 
-    </div>
+    </div> 
     <script>
-        var pwd = document.getElementById('password-signup');
-        var repwd = document.getElementById('repassword');
-        var erroRepwd = document.getElementById('repassword-validate');
-        var loginModal = document.getElementById('login-modal');
-        var signupModal = document.getElementById('signup-modal');
-        function rePwdValidate(){
-        
-            if (pwd.value.localeCompare(repwd.value)!=0) {erroRepwd.style.display="block";}
-            else {erroRepwd.style.display="none";}
-        }
-        function  checkFormLogin(){
-                document.getElementById('signup-modal').style.display="none";
-        }
-        function  checkFormSignup(){
-                document.getElementById('login-modal').style.display="none";
-        }
-        $("#login").on('click', function () {
-            loginModal.style.display = "flex";
-        });
-        
-        $("#signup").on('click', function () {
-            signupModal.style.display = "flex";
-        });
         function animateValue(obj, start, end, duration) {
             let startTimestamp = null;
             const step = (timestamp) => {
@@ -264,7 +162,7 @@
         animateValue(obj2, 0, 50, 8000);
         animateValue(obj3, 0, 20000, 8000);
         animateValue(obj4, 0, 19923, 8000);
-    </script>
+    </script>      
 </body>
 
 </html>
